@@ -3,8 +3,11 @@ var main = module.exports = {
     require( 'es6-promise/dist/es6-promise' ).polyfill();
 
     var coffeeMaker = require( './coffee-maker' ).create();
-    coffeeMaker.brew();
+    return coffeeMaker.brew();
   }
 };
 
-main.start();
+// this will be replaced by the build process
+// on production by false. And uglify will just remove it from the final
+// bundle since it is always true
+( !global.__TEST_ENV__ ) && main.start();

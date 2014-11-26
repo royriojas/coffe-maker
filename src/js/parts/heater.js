@@ -13,6 +13,7 @@ module.exports = inherit( electricPart, {
     var me = this;
     me.electricity.connect( this );
     me.regulator.regulate();
+    console.log( 'heater:heating!' );
   },
   create: function () {
     var ins = Object.create( this );

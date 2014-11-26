@@ -1,4 +1,5 @@
 module.exports = {
+  name: 'regulator', // added for demo purposes
   init: function ( electricity ) {
     var me = this;
     me.electricity = electricity;
@@ -6,8 +7,8 @@ module.exports = {
   },
   regulate: function () {
     var me = this;
+    me.electricity.connect( this );
     console.log( 'regulate...' );
-    me.electricity.connect();
   },
   create: function ( electricity ) {
     var ins = Object.create( this );

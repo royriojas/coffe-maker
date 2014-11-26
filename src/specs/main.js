@@ -1,7 +1,7 @@
 var actualCoffeeMaker = require( '../js/coffee-maker' );
 
 describe( 'main', function () {
-  it( 'should start the coffee-maker and make coffee', function () {
+  it( 'should start the coffee-maker and make good coffee', function ( done ) {
     var me = this;
     var brewSpy;
 
@@ -16,9 +16,15 @@ describe( 'main', function () {
       }
     };
 
-    require( '../js/main', deps );
+    var main = require( '../js/main', deps );
+
+    var coffee = main.start();
 
     expect( brewSpy ).to.have.been.called;
 
+    coffee.then(function ( result ) {
+      expect( result.coffee.name ).to.equal( 'good coffee!' );
+      done();
+    } );
   } );
 } );
