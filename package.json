@@ -8,7 +8,6 @@
     "jQuery": "global:jQuery",
     "chrome": "global:chrome",
     "screen": "global:screen",
-    "kno": "global:kno",
     "document": "global:document",
     "Worker": "global:Worker",
     "Promise": "global:Promise",
