@@ -1,4 +1,5 @@
-# Look ma! no DI. A way to achieve what Angular DI achieves without needing the DI injector.
+# Look ma! no DI. 
+> A way to achieve what Angular DI achieves without needing the DI injector.
 
 ## Overview
 
