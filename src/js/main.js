@@ -10,6 +10,7 @@ var main = module.exports = {
 // this will be replaced by the build process
 // on production by false. And uglify will just remove it from the final
 // bundle since it is always true
+/* istanbul ignore if */
 if ( !global.__TEST_ENV__ ) {
   main.start();
 }
