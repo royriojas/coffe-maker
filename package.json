@@ -3,16 +3,6 @@
   "version": "0.0.3",
   "description": "Simple example of a coffee maker",
   "main": "index.js",
-  "browserify-shim": {
-    "window": "global:window",
-    "jQuery": "global:jQuery",
-    "chrome": "global:chrome",
-    "screen": "global:screen",
-    "document": "global:document",
-    "Worker": "global:Worker",
-    "Promise": "global:Promise",
-    "self": "global:self"
-  },
   "scripts": {
     "test": "npm test"
   },
@@ -85,6 +75,7 @@
     "reactify": "^0.17.1",
     "sinon": "^1.12.1",
     "sinon-chai": "^2.6.0",
+    "stringformat": "0.0.5",
     "time-grunt": "^1.0.0",
     "twig": "^0.7.2",
     "yuidoc-theme-blue": "^0.1.8",
