@@ -112,7 +112,7 @@ grunt --build-number=1.4.2
 
 will generate the files: 
 - `dist/js/main.1.2.3.js` with tokens like `global.__TEST_ENV__` replaced by the provided values in the ez-frontend config (`grunt-deps/configs/ez-frontend`)
-- `dist/js/main.1.2.3.min.js` Same as above, but minized with ugligy
+- `dist/js/main.1.2.3.min.js` Same as above, but minimized with `uglifyjs`
 
 This task uses the output of grunt `browserify:js-main`.
 
