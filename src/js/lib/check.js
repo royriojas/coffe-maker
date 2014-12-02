@@ -44,6 +44,16 @@ var chk = {
    * @method isNull
    * @param val {*} the value to check
    * @return {Boolean} true if it is null (or undefined)
+   * @example
+   *
+   * ```javascript
+   * var check = require('./check'); // path to check
+   *
+   * check.isNull(null) // true
+   * check.isNull(undefined) // true as well, we're considering undefined to also be trated as null for simplicity
+   *
+   * ```
+   *
    */
   isNull: function ( val ) {
     return typeof val === "undefined" || val === null;
