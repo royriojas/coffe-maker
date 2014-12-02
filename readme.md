@@ -2,14 +2,18 @@
 
 ## Overview
 
-This is a demo of using CommonJS modules + Browserify to achieve what Angular DI helps to bring to javascript with its injector. 
-Basically been able to make the code broken into modular pieces that are loosely coupled and can be replaced by mocks during testing.
+This is a demo of using CommonJS modules + Browserify to achieve what Angular DI 
+helps to bring to javascript with its injector. 
 
-The goal is to prove that, even when Angular DI is a very brilliant piece of code, it might be not useful if you're already using
-CommonJS modules + Browserify.
+Basically been able to make the code broken into modular pieces that are loosely 
+coupled and can be replaced by mocks during testing.
 
-This will also be the demo project for `build-workflow` a npm module that can help you to manage the common tasks related to 
-frontend development, based on grunt, it provides some useful tasks to make the frontend development a little bit easier.
+The goal is to prove that, even when Angular DI is a very brilliant piece of code, 
+it might be not useful if you're already using CommonJS modules + Browserify.
+
+This will also be the demo project for `build-workflow` a npm module that can help 
+you to manage the common tasks related to frontend development, based on grunt, 
+it provides some useful tasks to make the frontend development a little bit easier.
 
 ## building it
 
@@ -20,6 +24,13 @@ npm i
 # run the build target to generate the changelog, annotated documentation and apidocs.
 grunt build 
 ```
+
+This repo contains:
+
+- The code is inside `src/js`
+- And the tests are inside `src/specs`
+- Example of testing things like `window.location` and `window.alert` in case you need to test this kind of things
+without requiring to really access the global scope.
 
 ## Running the tests
 
