@@ -11,6 +11,14 @@ coupled and can be replaced by mocks during testing.
 The goal is to prove that, even when Angular DI is a very brilliant piece of code, 
 it might be not useful if you're already using CommonJS modules + Browserify.
 
+Also With this configuration is pretty easy to use any module that can be bundled with browserify. 
+Most of the generic modules, like `moment`, `numeral` and others can be just browserified 
+without problems. So you have lots of modules in the npm registry that could just work for you out of the box
+
+Using this approach is pretty easy to use the same code on both the client and the server. 
+
+**Please note:**
+
 This will also be the demo project for `build-workflow` a npm module that can help 
 you to manage the common tasks related to frontend development, based on grunt, 
 it provides some useful tasks to make the frontend development a little bit easier.

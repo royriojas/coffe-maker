@@ -1,4 +1,12 @@
 /**
+ * @module coffee-maker
+ **/
+
+/**
+ * @submodule lib
+ **/
+
+/**
  *
  * Utility for do some basic check on arguments and objects
  *

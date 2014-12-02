@@ -1,4 +1,8 @@
 /**
+ * @submodule lib
+ **/
+
+/**
  *
  * @class lib
  * @static
@@ -9,9 +13,19 @@ var type = check.typeOf.bind( check );
 var isPlainObject = check.isPlainObject.bind( check );
 
 /**
- * @method extend jQuery extend as commonJS module
+ * jQuery extend as commonJS module.
+ *
+ * **Please note:**
+ *
+ * This method is just exported as a function
+ * Since Yuidoc requires methods to be attached to an object, by convention
+ * We create a dummy static class that matches the submodule/module name. In this case lib.
+ *
+ * @method extend
  * @returns {Object}
  */
+// borrowed from `jQuery.extend`. As a commonJS module is easier to include this in the final bundle
+// only when required from any source
 module.exports = function extend() {
   var options, name, src, copy, copyIsArray, clone,
     target = arguments[ 0 ] || {},

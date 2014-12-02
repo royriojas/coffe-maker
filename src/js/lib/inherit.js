@@ -1,3 +1,13 @@
+/**
+ * A module that provide some reusable utilities
+ * @submodule lib
+ **/
+
+/**
+ * @class lib
+ * @static
+ */
+
 var extend = require( './extend' );
 
 /**
