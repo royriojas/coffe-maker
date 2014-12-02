@@ -6,7 +6,7 @@
  */
 
 /**
- * @class coffee maker
+ * @class coffee-maker
  */
 var Promise = require( 'Promise' );
 
