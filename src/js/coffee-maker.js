@@ -16,6 +16,7 @@ module.exports = {
     console.log( 'brewing coffee start!' );
 
     return new Promise(function ( resolve, reject ) {
+      // this code just simulate an expensive async operation 
       setTimeout(function () {
         console.log( 'brewing coffee done!' );
         resolve( {

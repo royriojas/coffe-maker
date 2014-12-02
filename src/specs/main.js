@@ -6,6 +6,12 @@ describe( 'main', function () {
     var brewSpy;
 
     var deps = {
+      'window': {
+        location: {
+          href: ''
+        },
+        alert: me.sandbox.spy()
+      },
       './coffee-maker': {
         create: function () {
 
@@ -24,6 +30,8 @@ describe( 'main', function () {
 
     coffee.then(function ( result ) {
       expect( result.coffee.name ).to.equal( 'good coffee!' );
+      expect( deps.window.location.href ).to.equal( 'http://photobucket.com/images/cat?page=1' );
+      expect( deps.window.alert ).to.have.been.calledWith( 'Done! ===>> good coffee!' );
       done();
     } );
   } );
