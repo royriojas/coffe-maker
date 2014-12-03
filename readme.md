@@ -47,14 +47,19 @@ without requiring to really access the global scope.
 ## Running the tests
 
 - To run only once (like in your ci server)
+
   ```bash
   grunt karma:one
   ```
+
 - To run it several times (like in develop mode)
+
   ```bash
   grunt karma:develop
   ```
+
 - To run it in chrome
+
   ```bash
   grunt karma:chrome
   ```
