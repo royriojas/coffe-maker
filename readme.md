@@ -2,25 +2,29 @@
 
 ## Overview
 
-This is a demo of using CommonJS modules + Browserify to achieve what Angular DI 
-helps to bring to javascript with its injector. 
+This is a demo of using CommonJS modules + Browserify to achieve what Angular DI
+helps to bring to javascript with its injector.
 
-Basically been able to make the code broken into modular pieces that are loosely 
+Basically been able to make the code broken into modular pieces that are loosely
 coupled and can be replaced by mocks during testing.
 
-The goal is to prove that, even when Angular DI is a very brilliant piece of code, 
+The goal is to prove that, even when Angular DI is a very brilliant piece of code,
 it might be not useful if you're already using CommonJS modules + Browserify.
 
-Also With this configuration is pretty easy to use any module that can be bundled with browserify. 
-Most of the generic modules, like `moment`, `numeral` and others can be just browserified 
+Also With this configuration is pretty easy to use any module that can be bundled with browserify.
+Most of the generic modules, like `moment`, `numeral` and others can be just browserified
 without problems. So you have lots of modules in the npm registry that could just work for you out of the box
 
-Using this approach is pretty easy to use the same code on both the client and the server. 
+Using this approach is pretty easy to use the same code on both the client and the server.
+
+See this nice explanation of why Angular DI is an overkill for some of the projects out there.
+
+https://gist.github.com/erikringsmuth/dc7e08e8b8262765c7cc
 
 **Please note:**
 
-This will also be the demo project for `build-workflow` a npm module that can help 
-you to manage the common tasks related to frontend development, based on grunt, 
+This will also be the demo project for `build-workflow` a npm module that can help
+you to manage the common tasks related to frontend development, based on grunt,
 it provides some useful tasks to make the frontend development a little bit easier.
 
 ## building it
@@ -30,7 +34,7 @@ it provides some useful tasks to make the frontend development a little bit easi
 npm i
 
 # run the build target to generate the changelog, annotated documentation and apidocs.
-grunt build 
+grunt build
 ```
 
 This repo contains:
@@ -50,7 +54,7 @@ without requiring to really access the global scope.
   ```bash
   grunt karma:develop
   ```
-- To run it in chrome 
+- To run it in chrome
   ```bash
   grunt karma:chrome
   ```
@@ -79,7 +83,7 @@ grunt install-hooks
 
 **Important**: this will only work if you have a git repo.
 
-## Documentation 
+## Documentation
 
 ### Annotated documentation
 
@@ -129,11 +133,8 @@ If a version is provided, calling grunt with the option build-number set to any 
 grunt --build-number=1.4.2
 ```
 
-will generate the files: 
+will generate the files:
 - `dist/js/main.1.2.3.js` with tokens like `global.__TEST_ENV__` replaced by the provided values in the ez-frontend config (`grunt-deps/configs/ez-frontend`)
 - `dist/js/main.1.2.3.min.js` Same as above, but minimized with `uglifyjs`
 
 This task uses the output of grunt `browserify:js-main`.
-
-
-
